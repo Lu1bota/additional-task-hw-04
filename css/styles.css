@@ -1,4 +1,4 @@
-/* GLOBAL SETINGS */
+/* #region GLOBAL SETINGS */
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -71,35 +71,35 @@ section {
     padding-bottom: 100px;
 }
 
-/* HEADER */
+/* #endregion */
+
+/* #region HEADER */
 
 .header {
     
 }
 
 .header-container {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column; */
-}
-
-/* .header-container-list {
     display: flex;
-} */
+}
 
 .header-nav {
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
+    
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 1.11;
     letter-spacing: -0.03em;
     color: #111;
-    padding-top: 28px;
+    padding: 28px 0;
 }
 
 .logo-italic {
@@ -111,12 +111,19 @@ section {
     color: #111;
 }
 
+.header-icon-chocolate {
+    fill: #fff;
+    stroke: #FD9222;
+    margin-left: 4px;
+}
+
 .header-list {
     display: flex;
     gap: 24px;
     padding-top: 30px;
     padding-bottom: 30px;
-}
+    
+} 
 
 .header-list-item {}
 
@@ -126,6 +133,7 @@ section {
     line-height: 1.14;
     letter-spacing: -0.02em;
     color: #111;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-list-item-link:hover,
@@ -147,12 +155,38 @@ section {
     color: #111;
 }
 
-/* START PAGE */
+.header-icons-list {
+    display: flex;
+    gap: 18px;
+    margin-top: 28px;
+    margin-left: 90px;
+}
+
+.header-icons-list-item {}
+
+.header-icons-list-link {}
+
+.header-icons {
+    fill: #fff;
+    stroke: #111111;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-icons:hover,
+.header-icons:focus {
+    stroke: #fd9222;
+}
+
+/* #endregion */
+
+/* #region START PAGE */
 
 .start-page-container {
     width: 1200px;
     background-color: #1e1823;
+    background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(../images/start-page-bg.jpg);
     border-radius: 30px;
+    padding: 0;
 }
 
 .start-page {
@@ -166,7 +200,7 @@ section {
     letter-spacing: -0.03em;
     color: #fff;
     max-width: 484px;
-    padding-top: 365px;
+    padding-top: 381px;
     border-radius: 8px;
     margin-bottom: 32px;
     margin-left: 72px;
@@ -174,12 +208,13 @@ section {
 
 .start-page-button-container {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    gap: 32px;
-    padding-bottom: 46px;
+    /* gap: 32px; */
+    padding-bottom: 40px;
     
     width: 1056px;
+    margin: 0 auto;
 }
 
 .button-container {
@@ -188,15 +223,16 @@ section {
     justify-content: flex-start;
     flex-direction: row;
 
-    width: 1056px;
+    /* width: 1056px; */
     height: 45px;
 }
 
 .container-link-scroll {
-    margin-bottom: 12px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    /* width: 130px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 .start-page-button {
@@ -205,11 +241,13 @@ section {
     font-size: 14px;
     color: #fff;
     margin-right: 14px;
-    margin-left: 72px;
+    /* margin-left: 72px; */
     max-width: 148px;
     height: 45px;
     padding: 14px 40px;
     border-radius: 100px;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .start-page-button:hover,
@@ -222,6 +260,8 @@ section {
     font-weight: 600;
     font-size: 14px;
     color: #fff;
+    background-color: transparent;
+    border: none;
 
     border: 1px solid #fff;
     border-radius: 100px;
@@ -229,22 +269,26 @@ section {
     width: 185px;
     height: 45px;
     text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .start-page-link:hover,
 .start-page-link:focus {
     color: #fd9222;
+    background-color: #fff;
 }
 
 .start-page-link-scroll {
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.03em;
     color: #fff;
-    display: flex;
-    align-items: flex-start;
-    width: 86px;
+    /* display: inline-flex;
+    align-items: flex-start; */
+    width: 76px;
+    height: 18px;
 }
 
 .start-page-link-scroll:hover,
@@ -252,7 +296,23 @@ section {
     color: #fd9222;
 }
 
-/* BENEFITS */
+.link-scroll-bg {
+    display: inline;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 14px;
+}
+
+.start-page-link-scroll .link-scroll-icon {
+    fill: #fd9222;
+}
+
+/* #endregion */
+
+/* #region BENEFITS */
 
 .benefits {
     background-color: #1e1823;
@@ -301,7 +361,9 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* INGREDIENTS */
+/* #endregion */
+
+/* #region INGREDIENTS */
 
 .ingredients {
     
@@ -419,7 +481,9 @@ section {
     
 }
 
-/* How it’s made? */
+/* #endregion */
+
+/* #region How it’s made? */
 
 .made {
     padding-top: 0;
@@ -490,7 +554,9 @@ section {
     color: #111;
 }
 
-/* PRODUCTS */
+/* #endregion */
+
+/* #region PRODUCTS */
 
 .products {}
 
@@ -535,7 +601,9 @@ section {
     color: #111;
 }
 
-/* TOP SELLERS */
+/* #endregion */
+
+/* #region TOP SELLERS */
 
 .top-seller {}
 
@@ -566,7 +634,9 @@ section {
     color: #111;
 }
 
-/* REVIEWS */
+/* #endregion */
+
+/* #region REVIEWS */
 
 .reviews {
     padding-top: 0;
@@ -674,7 +744,9 @@ section {
     color: #fff;
 }
 
-/* FOOTER */
+/* #endregion */
+
+/* #region FOOTER */
 
 .footer {
     background-color: #1e1823;
@@ -769,3 +841,5 @@ section {
 .footer-list-item-link:focus {
     color: #fd9222;
 }
+
+/* #endregion */
