@@ -118,9 +118,7 @@ section {
     gap: 24px;
     padding: 30px 0;
     
-} 
-
-.header-list-item {}
+}
 
 .header-list-item-link {
     font-weight: 500;
@@ -396,10 +394,6 @@ section {
 
 /* #region INGREDIENTS */
 
-.ingredients {
-    
-}
-
 .container-ingregients {
     display: flex;
     align-items: center;
@@ -486,10 +480,6 @@ section {
     height: 270px;
 }
 
-.container-ingredients-list-item {
-    
-}
-
 .container-ingredients-list-item img {
     display: flex;
     justify-content: center;
@@ -497,10 +487,6 @@ section {
     margin-top: 28px;
     margin-right: 32px;
     margin-left: 32px;
-}
-
-.container-ingredients-img {
-    
 }
 
 .ingredients-overlay {
@@ -512,6 +498,7 @@ section {
     height: 100%;
     background-color: #fff;
     padding: 20px;
+    overflow-y: scroll;
     transform: translateY(100%);
     
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -544,9 +531,17 @@ section {
     font-weight: 400;
     font-size: 10px;
     line-height: 1.2;
+    min-width: 54px;
     background-color: #fd9222;
     border: none;
     color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ingredients-overlay-btn-orange:hover {
+    background-color: #fff;
+    color: #fd9222;
+    border: 1px solid #fd9222;
 }
 
 .ingredients-overlay-btn-white {
@@ -559,6 +554,12 @@ section {
     font-size: 10px;
     line-height: 1.2;
     color: #111;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ingredients-overlay-btn-white:hover {
+    background-color: #fd9222;
+    color: #fafafa;
 }
 
 .ingredients-overlay-text {
@@ -619,10 +620,6 @@ section {
     color: #fd9222;
 }
 
-.container-made-img-list {
-    /* display: flex; */
-}
-
 .container-made-list {
     display: flex;
     flex-direction: column;
@@ -663,8 +660,6 @@ section {
 
 /* #region PRODUCTS */
 
-.products {}
-
 .products-title {
     font-weight: 600;
     font-size: 24px;
@@ -678,10 +673,6 @@ section {
 .products-title-orange {
     color: #fd9222;
 }
-
-.products-article {}
-
-.products-article-link {}
 
 .products-article-title {
     font-weight: 600;
@@ -710,8 +701,6 @@ section {
 
 /* #region TOP SELLERS */
 
-.top-seller {}
-
 .top-seller-title {
     font-weight: 600;
     font-size: 24px;
@@ -725,10 +714,6 @@ section {
 .top-seller-title-black {
     color: #111;
 }
-
-.top-seller-list {}
-
-.top-seller-list-item {}
 
 .top-seller-list-title {
     font-weight: 600;
@@ -762,14 +747,6 @@ section {
     text-align: center;
     color: #fd9222;
     margin-bottom: 50px;
-}
-
-.container-reviews-list {
-    
-}
-
-.container-reviews-list-item {
-    
 }
 
 .reviews-title-black {
@@ -834,6 +811,7 @@ section {
     font-weight: 600;
     font-size: 18px;
     color: #111;
+    background-color: transparent;
     margin-top: 20px;
 
     border: 1px solid #fd9222;
@@ -841,6 +819,7 @@ section {
     padding: 14px 40px;
     width: 222px;
     height: 50px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reviews-button:hover,
@@ -866,14 +845,6 @@ section {
     width: 1136px;
 }
 
-.container-footer-title {
-
-}
-
-.container-footer-nav {
-
-}
-
 .footer-title {
     font-weight: 500;
     font-size: 28px;
@@ -887,8 +858,6 @@ section {
 .footer-title-white {
     color: #fff;
 }
-
-.footer-nav {}
 
 .footer-address {
     font-weight: 500;
@@ -907,10 +876,6 @@ section {
     margin-bottom: 14px;
 }
 
-.footer-address-link {
-
-}
-
 .footer-address-link-tel-email {
     font-weight: 400;
     font-size: 14px;
@@ -918,6 +883,7 @@ section {
     letter-spacing: -0.02em;
     text-align: center;
     color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address-link-tel-email:hover,
@@ -932,14 +898,13 @@ section {
     padding-bottom: 86px;
 }
 
-.footer-list-item {}
-
 .footer-list-item-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: -0.02em;
     color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list-item-link:hover,
